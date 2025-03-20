@@ -17,5 +17,5 @@ spec:
     spec:
       containers:
         - name: starlight-toc-overview-customizer
-          image: "trueberryless/starlight-toc-overview-customizer"
+          image: "trueberryless/starlight-toc-overview-customizer:0.1.0"
           imagePullPolicy: Always
