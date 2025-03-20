@@ -11,13 +11,13 @@ Update the content config file to add support for customizing individual pages u
 import { defineCollection } from 'astro:content';
 import { docsLoader } from '@astrojs/starlight/loaders';
 import { docsSchema } from '@astrojs/starlight/schema';
-+import { tocCustomHeadingOverviewSchema } from "starlight-toc-overview-customizer/schema";
++import { tocOverviewCustomizer } from "starlight-toc-overview-customizer/schema";
 
 export const collections = {
   docs: defineCollection({
     loader: docsLoader(),
     schema: docsSchema({
-+      extend: tocCustomHeadingOverviewSchema
++      extend: tocOverviewCustomizer
     })
   }),
 };
