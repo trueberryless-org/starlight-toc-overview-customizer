@@ -1,0 +1,66 @@
+---
+title: Configuration
+description: An overview of all the configuration options supported by the Starlight Table of Contents Overview Customizer plugin.
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 5
+---
+
+The Starlight Table of Contents Overview Customizer plugin can be configured inside the `astro.config.mjs` configuration file of your project:
+
+```js {11}
+// astro.config.mjs
+import starlight from "@astrojs/starlight";
+import { defineConfig } from "astro/config";
+import starlightTocOverviewCustomizer from "starlight-toc-overview-customizer";
+
+export default defineConfig({
+  integrations: [
+    starlight({
+      plugins: [
+        starlightTocOverviewCustomizer({
+          // Configuration options go here.
+        }),
+      ],
+      title: "My Docs",
+    }),
+  ],
+});
+```
+
+## Configuration options
+
+The Starlight Table of Contents Overview Customizer plugin accepts the following configuration options:
+
+### `overviewTitle`
+
+**Type:** `string | Record<string, string>`  
+**Default:** `undefined`
+
+Define the table of contents overview title for all pages on the site. This can be a string or an object with keys that match the locales of your site.
+
+```js
+export default defineConfig({
+  integrations: [
+    starlight({
+      locales: {
+        root: {
+          label: "English",
+          lang: "en",
+        },
+        fr: {
+          label: "Français",
+        },
+      }
+      plugins: [
+        starlightTocOverviewCustomizer({
+          overviewTitle: {
+            en: "Overview",
+            fr: "Aperçu",
+          },
+        });
+      ],
+    }),
+  ],
+});
+```

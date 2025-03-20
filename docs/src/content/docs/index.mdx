@@ -1,0 +1,38 @@
+---
+title: Starlight Table of Contents Overview Customizer
+description: Enhance Starlight&#39;s table of contents with customizable overview title
+head:
+  - tag: title
+    content: Starlight Table of Contents Overview Customizer
+  - tag: style
+    content: |
+      .hero-html {
+        --size: 12rem;
+        font-size: var(--size);
+        justify-content: center;
+        line-height: var(--size);
+      }
+template: splash
+editUrl: false
+hero:
+  tagline: Enhance Starlight&#39;s table of contents with customizable overview title
+  image:
+    html: "🚁"
+  actions:
+    - text: Get Started
+      link: /getting-started/
+      icon: right-arrow
+---
+
+import { Card, CardGrid } from "@astrojs/starlight/components";
+
+## Next steps
+
+<CardGrid stagger>
+  <Card title="Install the plugin" icon="puzzle">
+    Check the [getting started guide](/getting-started/) for installation instructions.
+  </Card>
+  <Card title="Configure the plugin" icon="setting">
+    Edit your config in the `astro.config.mjs` file.
+  </Card>
+</CardGrid>

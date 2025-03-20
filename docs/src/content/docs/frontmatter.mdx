@@ -1,0 +1,35 @@
+---
+title: Frontmatter
+---
+
+Starlight Table of Contents Overview Customizer uses Astro’s [content collections](https://docs.astro.build/en/guides/content-collections/), which are configured in the `src/content.config.ts` file.
+
+Update the content config file to add support for customizing individual pages using the frontmatter:
+
+```diff lang="ts"
+// src/content.config.ts
+import { defineCollection } from 'astro:content';
+import { docsLoader } from '@astrojs/starlight/loaders';
+import { docsSchema } from '@astrojs/starlight/schema';
++import { tocCustomHeadingOverviewSchema } from "starlight-toc-overview-customizer/schema";
+
+export const collections = {
+  docs: defineCollection({
+    loader: docsLoader(),
+    schema: docsSchema({
++      extend: tocCustomHeadingOverviewSchema
+    })
+  }),
+};
+```
+
+This allows you to specify a specific overview title for each page in your documentation like this:
+
+```md
+---
+title: Demo
+overviewTitle: HELLO! I am a custom overview title!
+---
+```
+
+Check out the [demo](/demo/) page for an example of this in action.
