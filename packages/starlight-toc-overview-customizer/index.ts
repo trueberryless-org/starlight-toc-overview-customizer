@@ -1,10 +1,20 @@
 import type { StarlightPlugin } from "@astrojs/starlight/types";
-import { validateConfig, type starlightTocOverviewCustomizerConfig, type starlightTocOverviewCustomizerUserConfig } from "./libs/config";
+
+import {
+  type starlightTocOverviewCustomizerConfig,
+  type starlightTocOverviewCustomizerUserConfig,
+  validateConfig,
+} from "./libs/config";
 import { vitePluginstarlightTocOverviewCustomizerConfig } from "./libs/vite";
 
-export type { starlightTocOverviewCustomizerConfig, starlightTocOverviewCustomizerUserConfig };
+export type {
+  starlightTocOverviewCustomizerConfig,
+  starlightTocOverviewCustomizerUserConfig,
+};
 
-export default function starlightTocOverviewCustomizer(userConfig?: starlightTocOverviewCustomizerUserConfig): StarlightPlugin {
+export default function starlightTocOverviewCustomizer(
+  userConfig?: starlightTocOverviewCustomizerUserConfig
+): StarlightPlugin {
   const config = validateConfig(userConfig);
   return {
     name: "starlight-toc-overview-customizer",
@@ -20,7 +30,9 @@ export default function starlightTocOverviewCustomizer(userConfig?: starlightToc
             "astro:config:setup": ({ updateConfig }) => {
               updateConfig({
                 vite: {
-                  plugins: [vitePluginstarlightTocOverviewCustomizerConfig(config)],
+                  plugins: [
+                    vitePluginstarlightTocOverviewCustomizerConfig(config),
+                  ],
                 },
               });
             },

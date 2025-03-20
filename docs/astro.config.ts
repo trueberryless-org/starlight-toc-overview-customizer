@@ -1,16 +1,16 @@
-import starlight from "@astrojs/starlight";
-import { defineConfig } from "astro/config";
-import starlightTocOverviewCustomizer from "starlight-toc-overview-customizer";
-import starlightPluginShowLatestVersion from "starlight-plugin-show-latest-version";
-import starlightPluginsDocsComponents from "@trueberryless-org/starlight-plugins-docs-components";
-
 import node from "@astrojs/node";
+import starlight from "@astrojs/starlight";
+import starlightPluginsDocsComponents from "@trueberryless-org/starlight-plugins-docs-components";
+import { defineConfig } from "astro/config";
+import starlightPluginShowLatestVersion from "starlight-plugin-show-latest-version";
+import starlightTocOverviewCustomizer from "starlight-toc-overview-customizer";
 
 export default defineConfig({
   integrations: [
     starlight({
       editLink: {
-        baseUrl: "https://github.com/trueberryless-org/starlight-toc-overview-customizer/edit/main/docs/",
+        baseUrl:
+          "https://github.com/trueberryless-org/starlight-toc-overview-customizer/edit/main/docs/",
       },
       plugins: [
         starlightTocOverviewCustomizer({
@@ -29,11 +29,17 @@ export default defineConfig({
       sidebar: [
         {
           label: "Start Here",
-          items: [{ slug: "getting-started" }, { slug: "configuration" }, { slug: "frontmatter" }, { slug: "demo" }],
+          items: [
+            { slug: "getting-started" },
+            { slug: "configuration" },
+            { slug: "frontmatter" },
+            { slug: "demo" },
+          ],
         },
       ],
       social: {
-        github: "https://github.com/trueberryless-org/starlight-toc-overview-customizer",
+        github:
+          "https://github.com/trueberryless-org/starlight-toc-overview-customizer",
       },
       title: "🚁",
     }),

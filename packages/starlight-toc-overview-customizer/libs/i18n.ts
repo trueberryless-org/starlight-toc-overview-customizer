@@ -2,7 +2,10 @@ import type { APIContext } from "astro";
 import { AstroError } from "astro/errors";
 import starlightConfig from "virtual:starlight/user-config";
 
-const defaultLang = starlightConfig.defaultLocale.lang ?? starlightConfig.defaultLocale.locale ?? "en";
+const defaultLang =
+  starlightConfig.defaultLocale.lang ??
+  starlightConfig.defaultLocale.locale ??
+  "en";
 
 export function getTranslation(
   currentLocale: APIContext["currentLocale"],

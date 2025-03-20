@@ -10,7 +10,10 @@ export function vitePluginstarlightTocOverviewCustomizerConfig(
   };
 
   const moduleResolutionMap = Object.fromEntries(
-    (Object.keys(modules) as (keyof typeof modules)[]).map((key) => [resolveVirtualModuleId(key), key])
+    (Object.keys(modules) as (keyof typeof modules)[]).map((key) => [
+      resolveVirtualModuleId(key),
+      key,
+    ])
   );
 
   return {
@@ -25,7 +28,9 @@ export function vitePluginstarlightTocOverviewCustomizerConfig(
   };
 }
 
-function resolveVirtualModuleId<TModuleId extends string>(id: TModuleId): `\0${TModuleId}` {
+function resolveVirtualModuleId<TModuleId extends string>(
+  id: TModuleId
+): `\0${TModuleId}` {
   return `\0${id}`;
 }
 

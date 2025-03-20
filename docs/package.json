@@ -1,16 +1,24 @@
 {
   "name": "starlight-toc-overview-customizer-docs",
   "version": "0.0.0",
-  "license": "MIT",
+  "private": true,
   "description": "Enhance Starlight&#39;s table of contents with customizable overview title",
+  "homepage": "https://github.com/trueberryless-org/starlight-toc-overview-customizer",
+  "bugs": "https://github.com/trueberryless-org/starlight-toc-overview-customizer/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/trueberryless-org/starlight-toc-overview-customizer.git",
+    "directory": "docs"
+  },
+  "license": "MIT",
   "author": "trueberryless-org",
   "type": "module",
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
+    "astro": "astro",
     "build": "astro build",
+    "dev": "astro dev",
     "preview": "astro preview",
-    "astro": "astro"
+    "start": "astro dev"
   },
   "dependencies": {
     "@astrojs/node": "^9.1.3",
@@ -21,15 +29,8 @@
     "starlight-plugin-show-latest-version": "^0.5.0",
     "starlight-toc-overview-customizer": "workspace:*"
   },
+  "packageManager": "pnpm@9.6.0",
   "engines": {
     "node": "^18.17.1 || ^20.3.0 || >=21.0.0"
-  },
-  "private": true,
-  "homepage": "https://github.com/trueberryless-org/starlight-toc-overview-customizer",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/trueberryless-org/starlight-toc-overview-customizer.git",
-    "directory": "docs"
-  },
-  "bugs": "https://github.com/trueberryless-org/starlight-toc-overview-customizer/issues"
+  }
 }
