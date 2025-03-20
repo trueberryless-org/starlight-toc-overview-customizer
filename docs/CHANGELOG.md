@@ -1,5 +1,11 @@
 # starlight-toc-overview-customizer-docs
 
+## 0.1.1
+
+### Patch Changes
+
+- [`aac914d`](https://github.com/trueberryless-org/starlight-toc-overview-customizer/commit/aac914d72b87b4afa413b86178cd8d21affa9f91) Thanks [@trueberryless](https://github.com/trueberryless)! - Fix schema import
+
 ## 0.1.0
 
 ### Minor Changes
