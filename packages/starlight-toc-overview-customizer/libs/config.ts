@@ -7,7 +7,9 @@ const configSchema = z
   })
   .default({});
 
-export function validateConfig(userConfig: unknown): starlightTocOverviewCustomizerConfig {
+export function validateConfig(
+  userConfig: unknown
+): starlightTocOverviewCustomizerConfig {
   const config = configSchema.safeParse(userConfig);
 
   if (!config.success) {
@@ -18,7 +20,10 @@ export function validateConfig(userConfig: unknown): starlightTocOverviewCustomi
       
       ${errors.formErrors.map((formError) => ` - ${formError}`).join("\n")}
       ${Object.entries(errors.fieldErrors)
-        .map(([fieldName, fieldErrors]) => ` - ${fieldName}: ${fieldErrors.join(" - ")}`)
+        .map(
+          ([fieldName, fieldErrors]) =>
+            ` - ${fieldName}: ${fieldErrors.join(" - ")}`
+        )
         .join("\n")}
         `,
       `See the error report above for more informations.\n\nIf you believe this is a bug, please file an issue at https://github.com/trueberryless-org/starlight-toc-overview-customizer/issues/new`
@@ -28,5 +33,9 @@ export function validateConfig(userConfig: unknown): starlightTocOverviewCustomi
   return config.data;
 }
 
-export type starlightTocOverviewCustomizerUserConfig = z.input<typeof configSchema>;
-export type starlightTocOverviewCustomizerConfig = z.output<typeof configSchema>;
+export type starlightTocOverviewCustomizerUserConfig = z.input<
+  typeof configSchema
+>;
+export type starlightTocOverviewCustomizerConfig = z.output<
+  typeof configSchema
+>;
