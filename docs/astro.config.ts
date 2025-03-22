@@ -1,9 +1,7 @@
-import node from "@astrojs/node";
 import starlight from "@astrojs/starlight";
 import starlightPluginsDocsComponents from "@trueberryless-org/starlight-plugins-docs-components";
 import { defineConfig } from "astro/config";
 import starlightLinksValidator from "starlight-links-validator";
-import starlightPluginShowLatestVersion from "starlight-plugin-show-latest-version";
 import starlightTocOverviewCustomizer from "starlight-toc-overview-customizer";
 
 export default defineConfig({
@@ -17,12 +15,6 @@ export default defineConfig({
         starlightLinksValidator(),
         starlightTocOverviewCustomizer({
           overviewTitle: "Back to top",
-        }),
-        starlightPluginShowLatestVersion({
-          source: {
-            slug: "starlight-toc-overview-customizer",
-          },
-          showInSiteTitle: "deferred",
         }),
         starlightPluginsDocsComponents({
           pluginName: "starlight-toc-overview-customizer",
@@ -46,7 +38,4 @@ export default defineConfig({
       title: "🚁",
     }),
   ],
-  adapter: node({
-    mode: "standalone",
-  }),
 });
