@@ -31,10 +31,13 @@ export default defineConfig({
           ],
         },
       ],
-      social: {
-        github:
-          "https://github.com/trueberryless-org/starlight-toc-overview-customizer",
-      },
+      social: [
+        {
+          icon: "github",
+          label: "GitHub",
+          href: "https://github.com/trueberryless-org/starlight-toc-overview-customizer",
+        },
+      ],
       title: "🚁",
     }),
   ],
