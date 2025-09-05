@@ -1,9 +1,18 @@
 {
   "name": "starlight-toc-overview-customizer",
   "version": "0.1.0",
-  "license": "MIT",
   "description": "Enhance Starlight&#39;s table of contents with customizable overview title",
-  "author": "trueberryless-org",
+  "homepage": "https://github.com/trueberryless-org/starlight-toc-overview-customizer",
+  "bugs": {
+    "url": "https://github.com/trueberryless-org/starlight-toc-overview-customizer/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/trueberryless-org/starlight-toc-overview-customizer.git",
+    "directory": "packages/starlight-toc-overview-customizer"
+  },
+  "license": "MIT",
+  "author": "trueberryless <trueberryless@gmail.com> (https://trueberryless.org)",
   "type": "module",
   "exports": {
     ".": "./index.ts",
@@ -23,12 +32,5 @@
   },
   "publishConfig": {
     "access": "public"
-  },
-  "homepage": "https://github.com/trueberryless-org/starlight-toc-overview-customizer",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/trueberryless-org/starlight-toc-overview-customizer.git",
-    "directory": "packages/starlight-toc-overview-customizer"
-  },
-  "bugs": "https://github.com/trueberryless-org/starlight-toc-overview-customizer/issues"
+  }
 }
