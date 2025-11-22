@@ -27,7 +27,6 @@ export default defineConfig({
             { slug: "getting-started" },
             { slug: "configuration" },
             { slug: "frontmatter" },
-            { slug: "demo" },
           ],
         },
       ],
