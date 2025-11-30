@@ -19,7 +19,11 @@ export default function starlightTocOverviewCustomizer(
   return {
     name: "starlight-toc-overview-customizer",
     hooks: {
-      "config:setup"({ addIntegration, addRouteMiddleware }) {
+      "config:setup"({ logger, addIntegration, addRouteMiddleware }) {
+        logger.warn(
+          "⚠️ This package is depricated. Please migrate your project following this blog: https://blog.trueberryless.org/blog/starlight-customize-toc-overview-title/. 🚨"
+        );
+
         addRouteMiddleware({
           entrypoint: "starlight-toc-overview-customizer/middleware",
         });
